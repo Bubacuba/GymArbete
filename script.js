@@ -1,16 +1,19 @@
-var gamma, //Vars
+//--------------------- Vars ---------------------\\
+var gamma,
     v,
     c,
     t_dialation,
     t;
 
-const display = document.querySelector("#display"); //Consts
+//--------------------- Consts ---------------------\\
+const display = document.querySelector("#display");
 const buttons = document.querySelectorAll("button");
 
 const navElements = document.querySelectorAll("nav ul li");
 const navLine = document.querySelector(".nav-line");
 
-navElements.forEach(element => { //Navigation Bar
+//--------------------- Navigation Bar ---------------------\\
+navElements.forEach(element => {
     element.addEventListener("mouseover", () => {
         positionNavLine(element.offsetLeft, element.offsetWidth);
     });
@@ -35,22 +38,13 @@ window.addEventListener("resize", () => {
     positionNavLine(navElements[0].offsetLeft, navElements[0].offsetWidth);
 });
 
-
-buttons.forEach((item) => { //Calculator
+//--------------------- Calculator ---------------------\\
+buttons.forEach((item) => {
     item.onclick = () => {
-        if (item.id == "clear") {
+        if (item.id = "time_dilation") {
+            calc_dilation(v, t);
+        } else if (item.id == "clear") {
             display.innerText = "";
-        } else if (item.id == "time_dilation") {
-            display.innerText = "Input Velocity: ";
-
-
-            v = display.innerText
-            console.log(v);
-
-            // if (item.id == "time_dilation" && pressed >= 1) {
-            //     display.innerText = "Input Time: ";
-            // }
-
         } else if (display.innerText != "" && item.id == "equal") {
             display.innerText = eval(display.innerText);
         } else if (display.innerText == "" && item.id == "equal") {
@@ -62,15 +56,26 @@ buttons.forEach((item) => { //Calculator
     };
 });
 
-c = 3 * 10 ^ 8;
 
-var gamma = 1 / Math.sqrt(1 - ((v * v) / ((c * c))));
+function calc_dilation(v, t) {
+    display.innerText = "Input Velocity: ";
 
-console.log(" m/s ", c + " m/s ", gamma + " gamma strålning");
+    $("display").value = v;
+    console.log(v)
 
-t = 5;
-var t_dialation = gamma * t;
-console.log(t_dialation);
+    c = 3 * 10 ^ 8;
+
+    var gamma = 1 / Math.sqrt(1 - ((v * v) / ((c * c))));
+
+    console.log(" m/s ", c + " m/s ", gamma + " gamma strålning");
+
+    t = 5;
+    var t_dialation = gamma * t;
+    console.log(t_dialation);
+}
+
+
+//--------------------- Dark Mode Code ---------------------\\
 
 const themeToggleBtn = document.querySelector(".theme-toggler");
 
