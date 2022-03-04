@@ -63,13 +63,19 @@ function calc_dilation(v, t) {
     $("display").value = v;
     console.log(v)
 
-    c = 3 * 10 ^ 8;
+    if (item.id = "time_dilation") {
+        display.innerText = "Input time: ";
+        $("display").value = t;
+    } else {
+        t = 0;
+    }
+
+    c = lightspeed;
 
     var gamma = 1 / Math.sqrt(1 - ((v * v) / ((c * c))));
 
     console.log(" m/s ", c + " m/s ", gamma + " gamma strålning");
 
-    t = 5;
     var t_dialation = gamma * t;
     console.log(t_dialation);
 }
