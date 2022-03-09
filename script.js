@@ -118,3 +118,17 @@ themeToggleBtn.onclick = () => {
 
 
 // show_page("page-2")
+
+
+function changeAbout() {
+    var idet = document.getElementsByTagName("div")[2];
+    document.getElementById("about_page").style.display = "block"
+    document.getElementById("calculator_page").style.display = "none"
+}
+
+function changeCalc() {
+    var idet = document.getElementsByTagName("div")[2];
+    document.getElementById("about_page").style.display = "none"
+    document.getElementById("calculator_page").style.display = "block"
+
+}
