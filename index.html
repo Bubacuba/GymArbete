@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Title</title>
+    <title>NTIPhysics</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
@@ -16,7 +16,7 @@
 
         <ul class="nav_ul">
             <li class="nav_li">
-                <a href="gay.html">Home</a>
+                <a href="#">Home</a>
             </li>
 
             <li class="nav_li">
@@ -33,13 +33,17 @@
             <li class="nav_li">
                 <a href="#">Visualisering</a>
             </li>
+
         </ul>
 
         <div class="nav-line"></div>
     </nav>
 
-    <div id="calculator_page">
+    <div class="theme-toggler active">
+        <i class="toggler-icon"></i>
+    </div>
 
+    <div id="calculator_page">
         <div class="left dark">
             <div class="container1  left dark">
                 <p class="txt_box1 dark">
@@ -50,9 +54,7 @@
 
         <div class="container dark">
             <div class="calculator dark">
-                <div class="theme-toggler active">
-                    <i class="toggler-icon"></i>
-                </div>
+
                 <div class="display-screen">
                     <div id="display"></div>
                 </div>
@@ -60,15 +62,15 @@
                     <table>
                         <tr>
                             <td><button class="btn-operator" id="clear">C</button></td>
-                            <td><button class="btn-operator" id="/">&divide;</button></td>
-                            <td><button class="btn-operator" id="*">&times;</button></td>
                             <td><button class="btn-operator" id="time_dilation">t'</button></td>
+                            <td><button class="btn-operator" id="testing">T</button></td>
+                            <td><button class="btn-operator" id="*">&times;</button></td>
                         </tr>
                         <tr>
                             <td><button class="btn-number" id="7">7</button></td>
                             <td><button class="btn-number" id="8">8</button></td>
                             <td><button class="btn-number" id="9">9</button></td>
-                            <td><button class="btn-operator" id="-">-</button></td>
+                            <td><button class="btn-operator" id="/">&divide;</button></td>
                         </tr>
                         <tr>
                             <td><button class="btn-number" id="4">4</button></td>
@@ -80,12 +82,13 @@
                             <td><button class="btn-number" id="1">1</button></td>
                             <td><button class="btn-number" id="2">2</button></td>
                             <td><button class="btn-number" id="3">3</button></td>
-                            <td rowspan="2"><button class="btn-equal" id="equal">=</button></td>
+                            <td><button class="btn-operator" id="-">-</button></td>
                         </tr>
                         <tr>
                             <td><button class="btn-operator" id="(">(</button></td>
                             <td><button class="btn-number" id="0">0</button></td>
                             <td><button class="btn-operator" id=")">)</button></td>
+                            <td><button class="btn-equal id = equal">=</button></td>
                         </tr>
                     </table>
                 </div>
@@ -104,23 +107,12 @@
     <div id="about_page">
         <div class="about dark">
             <div class="txt_box_about dark">
-                This program is a part of our examination work in high school. The main focus of this website is to
-                visualize and help students to picture what time dilation looks like. This can also be used by teachers
-                all over the world in order to make it easier for their students to learn about interstellar travels and
-                time dilation.
-
-                As of today, scientists and astronauts that work in the scientific and space field are trying to explore
-                space to expand our understanding of the universe and discover perhaps new life or a new civilization.
-                However, us humans have a limited life span and limited resources for interstellar travel. In order to
-                travel fast in a reasonable time frame we have to travel at the speed of light which currently is
-                impossible. There are obstacles we have yet to overcome, obstacles like relativity and time dilatation.
-                With this project we believe we can get a better understanding of these obstacles that keep us from
-                achieving us to the stars and beyond. The created website whose purpose is to explain time dilation and
-                the theory of relativity is meant to give better acknowledgement to the overall public.
-
-                The website’s goal is to aid and provide both students and others the information they need to both
-                calculate and understand the theories. One of the questions that this paper will answer is What time
-                dilation is and How the program of the website is created.
+                This program is a part of our examination work in high school. The main focus of this website is to visualize and help students to picture what time dilation looks like. This can also be used by teachers all over the world in order to make it easier for
+                their students to learn about interstellar travels and time dilation. As of today, scientists and astronauts that work in the scientific and space field are trying to explore space to expand our understanding of the universe and discover
+                perhaps new life or a new civilization. However, us humans have a limited life span and limited resources for interstellar travel. In order to travel fast in a reasonable time frame we have to travel at the speed of light which currently
+                is impossible. There are obstacles we have yet to overcome, obstacles like relativity and time dilatation. With this project we believe we can get a better understanding of these obstacles that keep us from achieving us to the stars and
+                beyond. The created website whose purpose is to explain time dilation and the theory of relativity is meant to give better acknowledgement to the overall public. The website’s goal is to aid and provide both students and others the information
+                they need to both calculate and understand the theories. One of the questions that this paper will answer is What time dilation is and How the program of the website is created.
 
             </div>
         </div>

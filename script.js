@@ -3,7 +3,8 @@ var gamma,
     v,
     c,
     t_dialation,
-    t;
+    t,
+    i;
 
 //--------------------- Consts ---------------------\\
 const display = document.querySelector("#display");
@@ -39,50 +40,46 @@ window.addEventListener("resize", () => {
 });
 
 //--------------------- Calculator ---------------------\\
+
 buttons.forEach((item) => {
     item.onclick = () => {
-        if (item.id = "time_dilation") {
-            calc_dilation(v, t);
-        } else if (item.id == "clear") {
+        if (item.id == "clear") {
             display.innerText = "";
         } else if (display.innerText != "" && item.id == "equal") {
             display.innerText = eval(display.innerText);
         } else if (display.innerText == "" && item.id == "equal") {
             display.innerText = "Empty!";
             setTimeout(() => (display.innerText = ""), 2000);
+        } else if (item.id == "testing") {
+            t = document.getElementById('display').innerText;
+            console.log("t = " + t);
+        } else if (item.id == "time_dilation") {
+            v = document.getElementById('display').innerText;
+            console.log(v);
+
+            let time_dialation = calc_dilation(v, t);
+            display.innerText = time_dialation;
         } else {
             display.innerText += item.id;
         }
     };
 });
 
-
 function calc_dilation(v, t) {
-    display.innerText = "Input Velocity: ";
 
-    $("display").value = v;
-    console.log(v)
-
-    if (item.id = "time_dilation") {
-        display.innerText = "Input time: ";
-        $("display").value = t;
-    } else {
-        t = 0;
-    }
-
-    c = lightspeed;
-
+    c = 299792458; // in m/s
     var gamma = 1 / Math.sqrt(1 - ((v * v) / ((c * c))));
 
-    console.log(" m/s ", c + " m/s ", gamma + " gamma strålning");
+    console.log(c + " m/s ", gamma + " gamma");
 
     var t_dialation = gamma * t;
-    console.log(t_dialation);
+    console.log("time dilation: " + t_dialation);
+
+    return gamma * t;
 }
 
 
 //--------------------- Dark Mode Code ---------------------\\
-
 const themeToggleBtn = document.querySelector(".theme-toggler");
 
 const calculator = document.querySelector(".calculator");
@@ -110,7 +107,6 @@ themeToggleBtn.onclick = () => {
     themeToggleBtn.classList.toggle("active");
     isDark = !isDark;
 };
-
 
 // function show_page(page_id) {
 //     document.querySelectorAll("#bigdiv > div").forEach(id => {
