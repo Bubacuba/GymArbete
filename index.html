@@ -15,20 +15,20 @@
     <nav>
 
         <ul class="nav_ul">
-            <li class="nav_li">
-                <a href="#" onclick="changeAbout()">About</a>
+            <li class="nav_li" page_name="about_page">
+                <a href="#">Home</a>
             </li>
 
-            <li class="nav_li">
-                <a href="#">TimeDialation</a>
+            <li class="nav_li" page_name="time_dilation">
+                <a href="#">TimeDilation</a>
             </li>
 
-            <li class="nav_li">
+            <li class="nav_li" page_name="rel_theory">
                 <a href="#">Relativitetsteorin</a>
             </li>
 
-            <li class="nav_li">
-                <a href="#" onclick="changeCalc()">Kalkylator</a>
+            <li class="nav_li" page_name="calculator_page">
+                <a href="#">Kalkylator</a>
             </li>
             <li class="nav_li">
                 <a href="#">Visualisering</a>
@@ -36,16 +36,69 @@
 
         </ul>
 
+
+        <div class="theme-toggler active">
+            <i class="toggler-icon"></i>
+        </div>
+
         <div class="nav-line"></div>
     </nav>
 
-    <div class="theme-toggler active">
-        <i class="toggler-icon"></i>
+    <div id="about_page" class="page-container">
+        <div class="about dark">
+            <div class="txt_box_about size dark">
+                <h1 class="about_us dark">
+                    About The Website
+                </h1>
+                This program is a part of our examination work in high school. The main focus of this website is to visualize and help students to picture what time dilation looks like. This can also be used by teachers all over the world in order to make it easier for
+                their students to learn about interstellar travels and time dilation. As of today, scientists and astronauts that work in the scientific and space field are trying to explore space to expand our understanding of the universe and discover
+                perhaps new life or a new civilization. However, us humans have a limited life span and limited resources for interstellar travel. In order to travel fast in a reasonable time frame we have to travel at the speed of light which currently
+                is impossible. There are obstacles we have yet to overcome, obstacles like relativity and time dilatation. With this project we believe we can get a better understanding of these obstacles that keep us from achieving us to the stars and
+                beyond. The created website whose purpose is to explain time dilation and the theory of relativity is meant to give better acknowledgement to the overall public. The website’s goal is to aid and provide both students and others the information
+                they need to both calculate and understand the theories. One of the questions that this paper will answer is What time dilation is and How the program of the website is created.
+
+            </div>
+        </div>
+        <div class="contact_about">
+            <div class="contact_left dark">
+                <div class="container_about dark">
+                    <p class="txt_box1 size dark">
+                        Our Team <br> We are two highschool students in our last term (2022) in NTI Södertörn in Sweden. We both study within Technolohy whereas one of orientates within engineering and the other software. With the help of our knowledge
+                        we have been able to create this website and the information in it.
+                    </p>
+                </div>
+                <div class="contact_container dark">
+                    <p class="txt_box2 dark">
+                        Contact
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div id="calculator_page">
+    <div id="time_dilation" class="page-container">
+        <div class="about dark">
+            <div class="txt_box_about size dark">
+                <h1 class="about_us dark">
+                    About TimeDilation
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="rel_theory" class="page-container">
+        <div class="about dark">
+            <div class="txt_box_about size dark">
+                <h1 class="about_us dark">
+                    About the Theory of Relativily
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="calculator_page" class="page-container">
         <div class="left dark">
-            <div class="container1  left dark">
+            <div class="container1 left dark">
                 <p class="txt_box1 dark">
                     Information text
                 </p>
@@ -88,7 +141,7 @@
                             <td><button class="btn-operator" id="(">(</button></td>
                             <td><button class="btn-number" id="0">0</button></td>
                             <td><button class="btn-operator" id=")">)</button></td>
-                            <td><button class="btn-equal id = equal">=</button></td>
+                            <td><button id="equal" class="btn-equal">=</button></td>
                         </tr>
                     </table>
                 </div>
@@ -103,33 +156,6 @@
             </div>
         </div>
     </div>
-
-    <div id="about_page" onclick="changeAbout()">
-        <div class="about dark">
-            <div class="txt_box_about dark">
-                This program is a part of our examination work in high school. The main focus of this website is to
-                visualize and help students to picture what time dilation looks like. This can also be used by teachers
-                all over the world in order to make it easier for
-                their students to learn about interstellar travels and time dilation. As of today, scientists and
-                astronauts that work in the scientific and space field are trying to explore space to expand our
-                understanding of the universe and discover
-                perhaps new life or a new civilization. However, us humans have a limited life span and limited
-                resources for interstellar travel. In order to travel fast in a reasonable time frame we have to travel
-                at the speed of light which currently
-                is impossible. There are obstacles we have yet to overcome, obstacles like relativity and time
-                dilatation. With this project we believe we can get a better understanding of these obstacles that keep
-                us from achieving us to the stars and
-                beyond. The created website whose purpose is to explain time dilation and the theory of relativity is
-                meant to give better acknowledgement to the overall public. The website’s goal is to aid and provide
-                both students and others the information
-                they need to both calculate and understand the theories. One of the questions that this paper will
-                answer is What time dilation is and How the program of the website is created.
-
-            </div>
-        </div>
-    </div>
-
-
     <script src="script.js"></script>
 </body>
 

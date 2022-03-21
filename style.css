@@ -11,13 +11,6 @@ body {
     background-image: linear-gradient( to bottom right, rgba(79, 51, 176, 1.0), rgba(210, 53, 165));
 }
 
-h1 {
-    margin-top: 200px;
-    text-align: center;
-    font-size: 48px;
-    color: #384a44;
-}
-
 nav {
     background: rgb(59, 59, 59);
     position: static;
@@ -59,6 +52,10 @@ p {
     font-family: sans-serif;
 }
 
+h1 {
+    position: relative;
+}
+
 .left {
     height: 20vw;
     width: 10vw;
@@ -66,9 +63,15 @@ p {
     place-items: left;
 }
 
+.container {
+    height: 100vh;
+    display: inline-block;
+    place-items: center;
+}
+
 .container1 {
     height: 40vw;
-    width: 20vw;
+    width: 25vw;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 30px #000;
@@ -77,10 +80,37 @@ p {
     margin-bottom: 100px;
 }
 
-.container {
-    height: 100vh;
-    display: inline-block;
-    place-items: center;
+.container3 {
+    height: 40vw;
+    width: 30vw;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #000;
+    background-color: #000;
+    margin-left: 850px;
+    margin-bottom: 100px;
+}
+
+.container_about {
+    position: absolute;
+    height: 40vw;
+    width: 30vw;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #000;
+    background-color: #000;
+    margin-left: 230px;
+}
+
+.contact_container {
+    height: 40vw;
+    width: 30vw;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #000;
+    background-color: #000;
+    margin-left: 850px;
+    margin-top: 40px;
 }
 
 .calculator {
@@ -95,21 +125,8 @@ p {
 }
 
 .right {
-    height: 20vw;
-    width: 10vw;
     display: inline-block;
     place-items: left;
-}
-
-.container3 {
-    height: 40vw;
-    width: 30vw;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 30px #000;
-    background-color: #000;
-    margin-left: 850px;
-    margin-bottom: 100px;
 }
 
 .theme-toggler {
@@ -174,18 +191,19 @@ button:hover {
     transform: scale(1.1);
 }
 
-button#equal {
-    height: 130px;
-}
-
 .about {
-    position: absolute;
+    position: relative;
     height: 40vw;
     width: 70vw;
+    margin-top: 20px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 30px #000;
     margin-left: 15vw;
+}
+
+.size {
+    font-size: 20px;
 }
 
 
@@ -200,14 +218,16 @@ button#equal {
 .calculator,
 .container1,
 .container3,
-.about {
+.about,
+h1 {
     background-color: #fff;
 }
 
 .calculator #display,
 .container1,
 .container3,
-.about {
+.about,
+h1 {
     color: #0a1e23;
 }
 
@@ -245,7 +265,8 @@ p {
 .calculator.dark,
 .container1.dark,
 .container3.dark,
-.about.dark {
+.about.dark,
+h1.dark {
     background-color: #000000;
 }
 
@@ -266,7 +287,8 @@ p {
 
 .txt_box1.dark,
 .txt_box2.dark,
-.txt_box_about.dark {
+.txt_box_about.dark,
+.about_us.dark {
     background-color: #000000;
     color: #ffffff
 }

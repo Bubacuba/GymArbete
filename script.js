@@ -91,6 +91,7 @@ const txt2 = document.querySelector(".txt_box2");
 const about = document.querySelector(".about");
 const txt_about = document.querySelector(".txt_box_about");
 const toggleIcon = document.querySelector(".toggler-icon");
+const h1 = document.querySelector(".about_us");
 
 let isDark = true;
 
@@ -104,31 +105,20 @@ themeToggleBtn.onclick = () => {
     about.classList.toggle("dark");
 
     txt_about.classList.toggle("dark");
+    h1.classList.toggle("dark");
     themeToggleBtn.classList.toggle("active");
     isDark = !isDark;
 };
 
-// function show_page(page_id) {
-//     document.querySelectorAll("#bigdiv > div").forEach(id => {
-//         document.getElementById(id).style.display = "none";
-//     })
-
-//     document.getElementById(page_id).style.display = "block";
-// }
-
-
-// show_page("page-2")
-
-
-function changeAbout() {
-    var idet = document.getElementsByTagName("div")[2];
-    document.getElementById("about_page").style.display = "block"
-    document.getElementById("calculator_page").style.display = "none"
+function changePageToID(pageID) {
+    $(".page-container").hide(); // Hide all pages
+    $(`#${pageID}`).show(); // Show only the chosen page
 }
 
-function changeCalc() {
-    var idet = document.getElementsByTagName("div")[2];
-    document.getElementById("about_page").style.display = "none"
-    document.getElementById("calculator_page").style.display = "block"
+$(".nav_li").on('click', function(event) {
+    // Stop other shit
+    event.stopPropagation();
+    event.stopImmediatePropagation();
 
-}
+    changePageToID($(this).attr("page_name"));
+});
