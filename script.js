@@ -39,6 +39,19 @@ window.addEventListener("resize", () => {
     positionNavLine(navElements[0].offsetLeft, navElements[0].offsetWidth);
 });
 
+function changePageToID(pageID) {
+    $(".page-container").hide(); // Hide all pages
+    $(`#${pageID}`).show(); // Show only the chosen page
+}
+
+$(".nav_li").on('click', function(event) {
+
+    event.stopPropagation();
+    event.stopImmediatePropagation();
+
+    changePageToID($(this).attr("page_name"));
+});
+
 //--------------------- Calculator ---------------------\\
 
 buttons.forEach((item) => {
@@ -79,7 +92,6 @@ function calc_dilation(v, t) {
     return gamma * t;
 }
 
-
 //--------------------- Dark Mode Code ---------------------\\
 const themeToggleBtn = document.querySelector(".theme-toggler");
 
@@ -110,15 +122,3 @@ themeToggleBtn.onclick = () => {
     themeToggleBtn.classList.toggle("active");
     isDark = !isDark;
 };
-
-function changePageToID(pageID) {
-    $(".page-container").hide(); // Hide all pages
-    $(`#${pageID}`).show(); // Show only the chosen page
-}
-
-$(".nav_li").on('click', function (event) {
-    event.stopPropagation();
-    event.stopImmediatePropagation();
-
-    changePageToID($(this).attr("page_name"));
-});
