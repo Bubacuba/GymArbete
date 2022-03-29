@@ -52,11 +52,12 @@ buttons.forEach((item) => {
             setTimeout(() => (display.innerText = ""), 2000);
         } else if (item.id == "testing") {
             t = document.getElementById('display').innerText;
+            display.innerText = "t = " + t;
             console.log("t = " + t);
-        } else if (item.id == "time_dilation") {
+            setTimeout(() => (display.innerText = ""), 2000);
+        } else if (item.id == "time_dilation_c") {
             v = document.getElementById('display').innerText;
             console.log(v);
-
             let time_dialation = calc_dilation(v, t);
             display.innerText = time_dialation;
         } else {
@@ -67,7 +68,7 @@ buttons.forEach((item) => {
 
 function calc_dilation(v, t) {
 
-    c = 299792458; // in m/s
+    c = 299792; // in km/s
     var gamma = 1 / Math.sqrt(1 - ((v * v) / ((c * c))));
 
     console.log(c + " m/s ", gamma + " gamma");
@@ -115,8 +116,7 @@ function changePageToID(pageID) {
     $(`#${pageID}`).show(); // Show only the chosen page
 }
 
-$(".nav_li").on('click', function(event) {
-    // Stop other shit
+$(".nav_li").on('click', function (event) {
     event.stopPropagation();
     event.stopImmediatePropagation();
 

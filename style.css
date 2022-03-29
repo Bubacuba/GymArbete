@@ -14,10 +14,30 @@ body {
 img {
     margin-left: 60px;
     margin-top: -12px;
-    /* margin: 10px;
-    padding: 10px; */
     position: absolute;
 }
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+p {
+    position: absolute;
+    color: white;
+    font-family: sans-serif;
+}
+
+h1 {
+    position: relative;
+}
+#time_dilation, 
+#rel_theory,
+#clock_visual{
+    height: 44vw;
+}
+
+ /*----------------------------- Navigation -----------------------------*/
 
 nav {
     background: rgb(59, 59, 59);
@@ -49,20 +69,7 @@ nav a {
     transition: all 0.7s cubic-bezier(0.43, 0.23, 0.29, 1.21);
 }
 
-a {
-    text-decoration: none;
-    color: #fff;
-}
-
-p {
-    position: absolute;
-    color: white;
-    font-family: sans-serif;
-}
-
-h1 {
-    position: relative;
-}
+ /*----------------------------- Layout for pages -----------------------------*/
 
 .left {
     height: 20vw;
@@ -90,7 +97,7 @@ h1 {
 
 .container3 {
     height: 40vw;
-    width: 30vw;
+    width: 32vw;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 30px #000;
@@ -214,11 +221,213 @@ button:hover {
     font-size: 20px;
 }
 
+/*----------------------------- Clocks -----------------------------*/
 
-/* 
-#about_text{
-  background-color: 
-} */
+.velocity-controls{
+    margin-top: 350px;
+  }
+  
+  #clock1 {
+    background: #fff;
+    border: 15px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    margin-left: 20%;
+    margin-top: 10px;
+  }
+  
+.sec-wrapper1 {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+  }
+  
+.hand1 {
+    position: absolute;
+    bottom: 50%;
+    transform-origin: 50% 100%;
+  }
+
+  
+.sec1 {
+    background: #d00;
+    left: 156.5px;
+    width: 5px;
+    height: 132px;
+    border-radius: 8px;
+    animation: rotateHand 1s linear infinite;
+  }
+  
+.sec1:after {
+    background: #d00;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -3.5px;
+    width: 5px;
+    height: 7px;
+  }
+
+ /* Second clock */
+
+ #clock2 {
+    background: #fff;
+    border: 15px solid #222;
+    border-radius: 50%;
+    width: 320px;
+    height: 320px;
+    margin-left: 800px;
+    margin-top: 10px;
+  }
+
+  .hours2 {
+    left: 120px;
+    font-size: 23.3333333333px;
+    letter-spacing: -1.6px;
+    line-height: 45px;
+  }
+
+  .hours2 li {
+    width: 80px;
+  }
+
+  .hours2 span {
+    display: block;
+  }
+  
+.sec-wrapper2 {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+  }
+  
+.hand2 {
+    position: absolute;
+    bottom: 50%;
+    transform-origin: 50% 100%;
+  }
+
+  
+.sec2 {
+    background: #d00;
+    left: 156.5px;
+    width: 5px;
+    height: 132px;
+    border-radius: 8px;
+    animation: rotateHand 60s linear infinite;
+  }
+.sec2:after {
+    background: #d00;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -3.5px;
+    width: 5px;
+    height: 7px;
+  }
+
+  input[type=range] {
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  input[type=range]:focus {
+    outline: none;
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 14px;
+    cursor: pointer;
+    animation: 0.2s;
+    box-shadow: 1px 1px 1px #50555C;
+    background: #50555C;
+    border-radius: 14px;
+    border: 0px solid #000000;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 0px solid #000000;
+    height: 20px;
+    width: 40px;
+    border-radius: 12px;
+    background: #529DE1;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -3px;
+  }
+
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #50555C;
+  }
+
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 14px;
+    cursor: pointer;
+    animation: 0.2s;
+    box-shadow: 1px 1px 1px #50555C;
+    background: #50555C;
+    border-radius: 14px;
+    border: 0px solid #000000;
+  }
+
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 0px solid #000000;
+    height: 20px;
+    width: 40px;
+    border-radius: 12px;
+    background: #529DE1;
+    cursor: pointer;
+  }
+
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 14px;
+    cursor: pointer;
+    animation: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+
+  input[type=range]::-ms-fill-lower {
+    background: #50555C;
+    border: 0px solid #000000;
+    border-radius: 28px;
+    box-shadow: 1px 1px 1px #50555C;
+  }
+
+  input[type=range]::-ms-fill-upper {
+    background: #50555C;
+    border: 0px solid #000000;
+    border-radius: 28px;
+    box-shadow: 1px 1px 1px #50555C;
+  }
+
+  input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 0px 0px 0px #000000;
+    border: 0px solid #000000;
+    height: 20px;
+    width: 40px;
+    border-radius: 12px;
+    background: #529DE1;
+    cursor: pointer;
+  }
+
+  @keyframes rotateHand {
+    to {
+      transform: rotate(1turn);
+    }
+  }
 
 
 /* light theme */

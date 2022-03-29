@@ -30,13 +30,11 @@
             <li class="nav_li" page_name="calculator_page">
                 <a href="#">Calculator</a>
             </li>
-            <li class="nav_li">
+
+            <li class="nav_li" page_name="clock_visual">
                 <a href="#">Visualisation</a>
             </li>
-
         </ul>
-
-
         <div class="theme-toggler active">
             <i class="toggler-icon"></i>
         </div>
@@ -50,12 +48,23 @@
                 <h1 class="about_us dark">
                     About The Website
                 </h1>
-                This program is a part of our examination work in high school. The main focus of this website is to visualize and help students to picture what time dilation looks like. This can also be used by teachers all over the world in order to make it easier for
-                their students to learn about interstellar travels and time dilation. As of today, scientists and astronauts that work in the scientific and space field are trying to explore space to expand our understanding of the universe and discover
-                perhaps new life or a new civilization. However, us humans have a limited life span and limited resources for interstellar travel. In order to travel fast in a reasonable time frame we have to travel at the speed of light which currently
-                is impossible. There are obstacles we have yet to overcome, obstacles like relativity and time dilatation. With this project we believe we can get a better understanding of these obstacles that keep us from achieving us to the stars and
-                beyond. The created website whose purpose is to explain time dilation and the theory of relativity is meant to give better acknowledgement to the overall public. The website’s goal is to aid and provide both students and others the information
-                they need to both calculate and understand the theories. One of the questions that this paper will answer is What time dilation is and How the program of the website is created.
+                This program is a part of our examination work in high school. The main focus of this website is to
+                visualize and help students to picture what time dilation looks like. This can also be used by teachers
+                all over the world in order to make it easier for
+                their students to learn about interstellar travels and time dilation. As of today, scientists and
+                astronauts that work in the scientific and space field are trying to explore space to expand our
+                understanding of the universe and discover
+                perhaps new life or a new civilization. However, us humans have a limited life span and limited
+                resources for interstellar travel. In order to travel fast in a reasonable time frame we have to travel
+                at the speed of light which currently
+                is impossible. There are obstacles we have yet to overcome, obstacles like relativity and time
+                dilatation. With this project we believe we can get a better understanding of these obstacles that keep
+                us from achieving us to the stars and
+                beyond. The created website whose purpose is to explain time dilation and the theory of relativity is
+                meant to give better acknowledgement to the overall public. The website’s goal is to aid and provide
+                both students and others the information
+                they need to both calculate and understand the theories. One of the questions that this paper will
+                answer is What time dilation is and How the program of the website is created.
 
             </div>
         </div>
@@ -63,7 +72,9 @@
             <div class="contact_left dark">
                 <div class="container_about dark">
                     <p class="txt_box1 size dark">
-                        Our Team <br> We are two highschool students in our last term (2022) in NTI Södertörn in Sweden. We both study within Technolohy whereas one of orientates within engineering and the other software. With the help of our knowledge
+                        Our Team <br> We are two highschool students in our last term (2022) in NTI Södertörn in Sweden.
+                        We both study within Technolohy whereas one of orientates within engineering and the other
+                        software. With the help of our knowledge
                         we have been able to create this website and the information in it.
                     </p>
                 </div>
@@ -115,7 +126,7 @@
                     <table>
                         <tr>
                             <td><button class="btn-operator" id="clear">C</button></td>
-                            <td><button class="btn-operator" id="time_dilation">t'</button></td>
+                            <td><button class="btn-operator" id="time_dilation_c">t'</button></td>
                             <td><button class="btn-operator" id="testing">T</button></td>
                             <td><button class="btn-operator" id="*">&times;</button></td>
                         </tr>
@@ -151,11 +162,35 @@
         <div class="right dark">
             <div class="right dark container3">
                 <p class="txt_box2 dark">
-                    Time Dilation Equation: <br><br> Δt' = γ * Δt0 = Δt0 / √(1 - v²/c²) <br><br> t0 is the time that has passed for a observer in movement. <br> (Time dilation can also be counted with the time of an observer
-                    <br>that is stationary, but has not been implemented on the website). <br><br> v is the speed for the travelling observer (m/s) <br><br> c is the speed o flight (299,792,458 m/s)
+                    Time Dilation Equation: <br><br> Δt' = U+03b3 * Δt0 = Δt0 / √(1 - v²/c²) <br><br> t0 is the time
+                    that has
+                    passed for a observer in movement. <br> (Time dilation can also be counted with the time of an
+                    observer
+                    <br>that is stationary, but has not been implemented on the website). <br><br> v is the speed for
+                    the travelling observer (m/s) <br><br> c is the speed o flight (299,792,458 m/s)
                 </p>
             </div>
         </div>
+    </div>
+
+    <div id="clock_visual" class="page-container">
+        <div id="clock1">
+            <div class="sec-wrapper1">
+                <div class="hand1 sec1">
+                </div>
+            </div>
+        </div>
+
+        <div id="clock2">
+            <div class="sec-wrapper2">
+                <div class="hand2 sec2"></div>
+            </div>
+            <div class="velocity-controls">
+                <input class="velocity-control velocity-percent-c" type="range" value="0" min="0" max="100">
+                <input class="velocity-control velocity-percent-c-decimal" type="range" value="0" min="0" max="10">
+            </div>
+        </div>
+
     </div>
     <script src="script.js"></script>
 </body>
