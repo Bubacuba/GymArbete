@@ -4,7 +4,7 @@ var gamma,
     c,
     t_dialation,
     t,
-    i;
+    i = 0;
 
 //--------------------- Consts ---------------------\\
 const display = document.querySelector("#display");
@@ -44,7 +44,7 @@ function changePageToID(pageID) {
     $(`#${pageID}`).show(); // Show only the chosen page
 }
 
-$(".nav_li").on('click', function(event) {
+$(".nav_li").on('click', function (event) {
 
     event.stopPropagation();
     event.stopImmediatePropagation();
@@ -63,16 +63,20 @@ buttons.forEach((item) => {
         } else if (display.innerText == "" && item.id == "equal") {
             display.innerText = "Empty!";
             setTimeout(() => (display.innerText = ""), 2000);
-        } else if (item.id == "testing") {
-            if (display.innerText != "") {
-                t = document.getElementById('display').innerText;
-                display.innerText = "";
-                display.innerText = "t = " + t + " (The new value)";
-                console.log("t = " + t + " (the new value)");
-            } else {
+        } else if (item.id == "t_input") {
+            if (i == 0) {
                 t = document.getElementById('display').innerText;
                 display.innerText = "t = " + t + " (press C to remove text)";
                 console.log("t = " + t + " press C to remove text");
+                i = i + 1;
+                console.log("i = " + i);
+            } else {
+                t = document.getElementById('display').innerText;
+                display.innerText = "";
+                display.innerText = "";
+                display.innerText = "t = " + t + " (The new value)";
+                console.log("t = " + t + " (the new value)");
+                console.log(i);
             }
         } else if (item.id == "time_dilation_c") {
             v = document.getElementById('display').innerText;
