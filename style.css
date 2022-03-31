@@ -119,7 +119,7 @@ button:hover {
     background: black;
     border-radius: 8px;
     box-shadow: 0 0 30px #000;
-    margin: calc(50vh - 320px);
+    margin: calc(50vh - 337px);
     margin-left: 900px;
     padding: 20px 30px;
     max-width: calc(100vw - 40px);
@@ -535,8 +535,7 @@ input[type=range]::-ms-thumb {
 .calculator,
 .container1,
 .container3,
-.about,
-h1 {
+.about,.calc_text  {
     background-color: #fff;
 }
 
@@ -544,7 +543,7 @@ h1 {
 .container1,
 .container3,
 .about,
-h1 {
+.calc_text{
     color: #0a1e23;
 }
 
@@ -561,7 +560,7 @@ p {
 
 .txt_box1,
 .txt_box2,
-.txt_box_about {
+.txt_box_about .calc_text{
     background-color: #ffffff;
     color: #000000;
 }
@@ -583,7 +582,7 @@ p {
 .container1.dark,
 .container3.dark,
 .about.dark,
-h1.dark {
+.calc_text.dark {
     background-color: #000000;
     color: white;
 }
@@ -606,7 +605,7 @@ p {
 .txt_box1.dark,
 .txt_box2.dark,
 .txt_box_about.dark,
-.about_us.dark {
+.about_us.dark, .calc_text.dark {
     background-color: #000000;
     color: #ffffff
 }

@@ -73,7 +73,6 @@ buttons.forEach((item) => {
             } else {
                 t = document.getElementById('display').innerText;
                 display.innerText = "";
-                display.innerText = "";
                 display.innerText = "t = " + t + " (The new value)";
                 console.log("t = " + t + " (the new value)");
                 console.log(i);
@@ -114,25 +113,24 @@ const container1 = document.querySelector(".container1");
 const container3 = document.querySelector(".container3");
 
 const txt1 = document.querySelector(".txt_box1");
-const txt2 = document.querySelector(".txt_box2");
 const about = document.querySelector(".about");
 const txt_about = document.querySelector(".txt_box_about");
 const toggleIcon = document.querySelector(".toggler-icon");
-const h1 = document.querySelector(".about_us");
+const about_us = document.querySelector(".about_us");
 
+const h2 = document.querySelector(".calc_text")
 let isDark = true;
 
 themeToggleBtn.onclick = () => {
     calculator.classList.toggle("dark");
     container1.classList.toggle("dark");
     container3.classList.toggle("dark");
-
     txt1.classList.toggle("dark");
-    txt2.classList.toggle("dark");
     about.classList.toggle("dark");
-
     txt_about.classList.toggle("dark");
-    h1.classList.toggle("dark");
+    about_us.classList.toggle("dark");
+    h2.classList.toggle("dark");
     themeToggleBtn.classList.toggle("active");
+
     isDark = !isDark;
 };
