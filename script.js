@@ -77,8 +77,8 @@ buttons.forEach((item) => {
             }
         } else if (item.id == "time_dilation_c") {
             v = document.getElementById('display').innerText;
-            if (v > 299792458) {
-                display.innerText = "Explain how u can be faster than the speed of light lmao";
+            if (v >= 299792458) {
+                display.innerText = "Explain how u can be as fast/faster than the speed of light lmao";
             } else {
                 console.log(v);
                 let time_dialation = calc_dilation(v, t);
