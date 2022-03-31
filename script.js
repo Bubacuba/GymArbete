@@ -64,15 +64,25 @@ buttons.forEach((item) => {
             display.innerText = "Empty!";
             setTimeout(() => (display.innerText = ""), 2000);
         } else if (item.id == "testing") {
-            t = document.getElementById('display').innerText;
-            display.innerText = "t = " + t;
-            console.log("t = " + t);
-            setTimeout(() => (display.innerText = ""), 2000);
+            if (display.innerText != "") {
+                t = document.getElementById('display').innerText;
+                display.innerText = "";
+                display.innerText = "t = " + t + " (The new value)";
+                console.log("t = " + t + " (the new value)");
+            } else {
+                t = document.getElementById('display').innerText;
+                display.innerText = "t = " + t + " (press C to remove text)";
+                console.log("t = " + t + " press C to remove text");
+            }
         } else if (item.id == "time_dilation_c") {
             v = document.getElementById('display').innerText;
-            console.log(v);
-            let time_dialation = calc_dilation(v, t);
-            display.innerText = time_dialation;
+            if (v > 299792458) {
+                display.innerText = "Explain how u can be faster than the speed of light lmao";
+            } else {
+                console.log(v);
+                let time_dialation = calc_dilation(v, t);
+                display.innerText = time_dialation;
+            }
         } else {
             display.innerText += item.id;
         }
