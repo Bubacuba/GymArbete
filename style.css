@@ -44,6 +44,10 @@ div#calculator_page {
     margin-top: 20px;
 }
 
+#text {
+    color: white;
+}
+
 
 /*----------------------------- Navigation -----------------------------*/
 
@@ -580,6 +584,7 @@ p {
 .about.dark,
 h1.dark {
     background-color: #000000;
+    color: white;
 }
 
 .calculator.dark #display {
