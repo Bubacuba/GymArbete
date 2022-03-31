@@ -66,16 +66,14 @@ buttons.forEach((item) => {
         } else if (item.id == "t_input") {
             if (i == 0) {
                 t = document.getElementById('display').innerText;
-                display.innerText = "t = " + t + " (press C to remove text)";
+                display.innerText = "t = " + t + " (press C to remove text)\n";
                 console.log("t = " + t + " press C to remove text");
                 i = i + 1;
                 console.log("i = " + i);
             } else {
                 t = document.getElementById('display').innerText;
-                display.innerText = "";
-                display.innerText = "t = " + t + " (The new value)";
-                console.log("t = " + t + " (the new value)");
-                console.log(i);
+                display.innerText = "changed value for t success! \n";
+                console.log(t + " = (the new value)");
             }
         } else if (item.id == "time_dilation_c") {
             v = document.getElementById('display').innerText;
