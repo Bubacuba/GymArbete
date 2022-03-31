@@ -81,7 +81,7 @@ buttons.forEach((item) => {
 
 function calc_dilation(v, t) {
 
-    c = 299792; // in km/s
+    c = 299792458; // in m/s
     var gamma = 1 / Math.sqrt(1 - ((v * v) / ((c * c))));
 
     console.log(c + " m/s ", gamma + " gamma");

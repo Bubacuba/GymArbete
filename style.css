@@ -24,7 +24,7 @@ a {
 
 #container_about>p {
     position: absolute;
-    color: white;
+    color: #fff;
     font-family: sans-serif;
 }
 
@@ -32,8 +32,10 @@ h1 {
     position: relative;
 }
 
-#time_dilation,
-#rel_theory,
+#time_dilation {
+    height: 100%;
+}
+
 #clock_visual {
     height: 44vw;
 }
@@ -95,7 +97,6 @@ button:hover {
 
 .about {
     position: relative;
-    height: 40vw;
     width: 70vw;
     margin-top: 20px;
     padding: 20px;
@@ -114,7 +115,7 @@ button:hover {
     background: black;
     border-radius: 8px;
     box-shadow: 0 0 30px #000;
-    margin: calc(50vh - 220px);
+    margin: calc(50vh - 320px);
     margin-left: 900px;
     padding: 20px 30px;
     max-width: calc(100vw - 40px);
@@ -208,7 +209,6 @@ span {
 }
 
 .container1 {
-    height: 40vw;
     width: 25vw;
     padding: 20px;
     border-radius: 10px;
@@ -220,7 +220,6 @@ span {
 }
 
 .container3 {
-    height: 40vw;
     width: 32vw;
     padding: 20px;
     border-radius: 10px;
@@ -232,7 +231,6 @@ span {
 
 .container_about {
     position: absolute;
-    height: 40vw;
     width: 30vw;
     padding: 20px;
     border-radius: 10px;
@@ -255,8 +253,6 @@ span {
 
 .calculator {
     position: absolute;
-    height: 37vw;
-    width: 21vw;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 30px #000;
